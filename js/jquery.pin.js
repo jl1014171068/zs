@@ -71,7 +71,6 @@
                 }
 
                 if (from < scrollY && to > scrollY) {
-                    console.log( $this)
                     !($this.css("position") == "fixed") && $this.css({
                         left: $this.offset().left,
                         top: data.pad.top
