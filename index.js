@@ -4,13 +4,17 @@ $(function() {
             this.navHover();
             this.handelSilder();
             var height = window.innerHeight - 70;
-            $(".goTop").pin({ padding: { top: height, bottom: 10, right:0 }, containerSelector: "#ping" })
-            $(".left-banner").pin({ padding: {  bottom: 10 }, containerSelector: "#ping" })
-            // $(".right-banner").pin({ padding: { bottom: 10 }, containerSelector: "#topNav" })
-            $(".right-banner").pin({ padding: {bottom: 10 }, containerSelector: "#ping" })
-            $('.close').click(function(e){
-                $(this).parent().hide()
-            })
+            if (document.body.clientWidth > 600) {
+                $(".goTop").pin({ padding: { top: height, bottom: 10 }, containerSelector: "#ping" })
+                $(".left-banner").pin({ padding: { bottom: 10 }, containerSelector: "#ping" })
+                $(".right-banner").pin({ padding: { bottom: 10 }, containerSelector: "#ping" })
+                $('.close').click(function(e) {
+                    $(this).parent().hide()
+                })
+            }else{
+                $(".goTop").pin({ padding: { bottom: 10 }, containerSelector: "#ping" })
+            }
+
         },
 
         handelSilder() {

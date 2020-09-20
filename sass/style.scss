@@ -883,13 +883,12 @@ body {
 .adsorbent {
     .goTop {
         position: absolute;
-        width: 130px;
+        width: 40px;
+        height: 40px;
         right: 20px;
         top: 40px;
         z-index: 20;
     }
-
-
 }
 
 .tip-banner {
@@ -920,9 +919,19 @@ body {
 }
 
 @media (max-device-width: 768px) {
-    .tip-banner {
-        top:330px;
+    .adsorbent .goTop {
+        bottom: 20px;
+        right: 10px;
+        position: fixed;
+        top: auto;
     }
+
+    .tip-banner {
+        top: 330px;
+        display: none;
+    }
+
+
     body {
         padding-top: 100px;
     }
@@ -1000,6 +1009,8 @@ body {
             }
         }
     }
+
+
 
     body {
         padding-top: 52px;

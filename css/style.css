@@ -692,7 +692,8 @@ body {
 
 .adsorbent .goTop {
   position: absolute;
-  width: 130px;
+  width: 40px;
+  height: 40px;
   right: 20px;
   top: 40px;
   z-index: 20;
@@ -723,8 +724,16 @@ body {
 }
 
 @media (max-device-width: 768px) {
+  .adsorbent .goTop {
+    bottom: 20px;
+    right: 10px;
+    position: fixed;
+    top: auto;
+  }
+
   .tip-banner {
     top: 330px;
+    display: none;
   }
 
   body {
