@@ -52,6 +52,7 @@ body {
 }
 
 .top {
+
     // position: relative;
     .navbar {
         padding: 0 2rem;
@@ -114,7 +115,8 @@ body {
         // width: 100%;
     }
 
-    .hover-downlist {
+    .tab-content {
+        // .hover-downlist {
         margin: 0;
         width: 100%;
         padding: 0.8rem 1.5rem;
@@ -145,16 +147,21 @@ body {
 
             input {
                 border-left: none;
+                height: 32px;
             }
 
             select {
+                font-size: $FONT_SIZE_MEDIUM;
                 border-radius: 8px 0px 0px 8px;
                 border-right: 0;
+                height: 32px;
             }
 
             button {
                 background-color: $MAIN_COLOR;
                 color: $FONT_COLOR_WHITE;
+                height: 32px;
+                line-height: 1;
             }
         }
 
@@ -165,7 +172,7 @@ body {
             li {
                 list-style: none;
                 display: inline-block;
-                padding: 0.3rem 2rem;
+                padding: 6px 11px;
 
                 a {
                     font-size: $FONT_SIZE_MEDIUM;
@@ -1143,4 +1150,8 @@ body {
     align-items: center;
 }
 
-@media (max-device-width: 1300px) {}
+@media (min-device-width: 1300px) {
+    .top .tab-content {
+        height: 60px;
+    }
+}

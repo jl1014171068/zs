@@ -54,14 +54,55 @@ $(function() {
                 },
             });
         },
-        navHover(){
-            $('#navTab >  li').mousemove(function(e) {
+        navHover() {
+
+            function throttle(handler, wait) {
+                var lastTime = 0;
+                return function() {
+                    var nowTime = new Date().getTime();
+                    if (nowTime - lastTime > wait) {
+                        handler.apply(this, arguments);
+                        lastTime = nowTime;
+                    }
+                }
+            }
+
+            function liMouseOve(e) {
                 var id = $(this).attr('data-id');
                 $('#navTabContent > div').removeClass('show active');
-                console.log($('#navTabContent > div').eq(0))
-                if(id && $(`#${id}`) && $(`#${id}`).length)$(`#${id}`).addClass('show active');
+                if (id && $(`#${id}`) && $(`#${id}`).length) $(`#${id}`).addClass('show active');
                 else $('#nav-con1').addClass('show active');
-            })
+            }
+            $('#navTab >  li').on('mousemove', throttle(liMouseOve, 300))
+
+            function mouseOut(e) {
+                var el = $(e)[0].toElement;
+                var flag = $(el).hasClass('hover-downlist') || $(el).closest('#navTabContent').length;
+                // 离开的时候如果 目标元素 不为子集菜单，则隐藏显示搜索
+                if (!flag) {
+                    $('#navTabContent > div').removeClass('show active');
+                    $('#nav-con1').addClass('show active');
+                    return
+                }
+                // 如果离开时目标元素 为子集菜单，则监控全局判断
+                function mouse(e) {
+                    var el = $(e)[0].toElement;
+                    var flag = $(el).hasClass('hover-downlist') || $(el).closest('#navTabContent').length;
+                    var conFlag = $(el).closest('.navbar-expand-lg').length;
+                    if(conFlag) {
+                        $(document).off('mousemove', mouse);
+                        return;
+                    }
+                    // 如果鼠标位置不为子集菜单，则隐藏，且显示搜索
+                    if (!flag) {
+                        $('#navTabContent > div').removeClass('show active');
+                        $('#nav-con1').addClass('show active');
+                        $(document).off('mousemove', mouse);
+                    }
+                }
+                $(document).on('mousemove', throttle(mouse, 100));
+            }
+            $('#navTab >  li').on('mouseout', throttle(mouseOut, 300));
         },
         navHover1() {
             $('#navTab >  li').mousemove(function(e) {

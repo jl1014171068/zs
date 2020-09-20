@@ -45,7 +45,7 @@ body {
         background: #000000;
         opacity: 0.21; }
 
-.top .hover-downlist {
+.top .tab-content {
   margin: 0;
   width: 100%;
   padding: 0.8rem 1.5rem;
@@ -55,30 +55,35 @@ body {
   opacity: 1;
   font-size: 14px;
   color: #333333; }
-  .top .hover-downlist .notice {
+  .top .tab-content .notice {
     color: #999999;
     padding: 0.375rem 0.75rem; }
-    .top .hover-downlist .notice a {
+    .top .tab-content .notice a {
       color: #333333; }
-  .top .hover-downlist .input-group .form-control:nth-child(1) {
+  .top .tab-content .input-group .form-control:nth-child(1) {
     -ms-flex: 0.4;
         flex: 0.4; }
-  .top .hover-downlist .input-group input {
-    border-left: none; }
-  .top .hover-downlist .input-group select {
+  .top .tab-content .input-group input {
+    border-left: none;
+    height: 32px; }
+  .top .tab-content .input-group select {
+    font-size: 14px;
     border-radius: 8px 0px 0px 8px;
-    border-right: 0; }
-  .top .hover-downlist .input-group button {
+    border-right: 0;
+    height: 32px; }
+  .top .tab-content .input-group button {
     background-color: #019e42;
-    color: #ffffff; }
-  .top .hover-downlist ul {
+    color: #ffffff;
+    height: 32px;
+    line-height: 1; }
+  .top .tab-content ul {
     margin: 0;
     padding: 0; }
-    .top .hover-downlist ul li {
+    .top .tab-content ul li {
       list-style: none;
       display: inline-block;
-      padding: 0.3rem 2rem; }
-      .top .hover-downlist ul li a {
+      padding: 6px 11px; }
+      .top .tab-content ul li a {
         font-size: 14px;
         color: #333333; }
 
@@ -755,5 +760,9 @@ body {
   justify-content: center;
   -ms-flex-align: center;
   align-items: center; }
+
+@media (min-device-width: 1300px) {
+  .top .tab-content {
+    height: 60px; } }
 
 /*# sourceMappingURL=style.css.map */
