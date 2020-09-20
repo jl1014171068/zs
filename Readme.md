@@ -1,2 +1,2 @@
 npm install postcss-cli autoprefixer
-npx postcss \*.css --use autoprefixer -d build/
+npx postcss css/\*.css --use autoprefixer -d build/
