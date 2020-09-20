@@ -13,80 +13,74 @@ body {
   left: 0;
   z-index: -1; }
 
-.top {
-  position: relative; }
-  .top .navbar {
-    padding: 0 2rem;
+.top .navbar {
+  padding: 0 2rem;
+  background-color: #019e42;
+  border-radius: 8px 8px 0px 0px; }
+  .top .navbar .navbar-collapse .navbar-nav {
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap; }
+    .top .navbar .navbar-collapse .navbar-nav .dropdown {
+      position: initial; }
+    .top .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+      color: #ffffff;
+      padding: 1rem 1.3rem;
+      font-size: 16px;
+      font-weight: bold; }
+      .top .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:after {
+        display: none; }
+    .top .navbar .navbar-collapse .navbar-nav .nav-item:hover {
+      background: rgba(255, 255, 255, 0.6); }
+    .top .navbar .navbar-collapse .navbar-nav .nav-item.active {
+      position: relative;
+      background-color: #017e44; }
+      .top .navbar .navbar-collapse .navbar-nav .nav-item.active:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: block;
+        content: '';
+        height: 5px;
+        background: #000000;
+        opacity: 0.21; }
+
+.top .hover-downlist {
+  margin: 0;
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background: #ffffff;
+  border: rgba(0, 0, 0, 0.1) solid 1px;
+  border-radius: 0px 0px 8px 8px;
+  opacity: 1;
+  font-size: 14px;
+  color: #333333; }
+  .top .hover-downlist .notice {
+    color: #999999;
+    padding: 0.375rem 0.75rem; }
+    .top .hover-downlist .notice a {
+      color: #333333; }
+  .top .hover-downlist .input-group .form-control:nth-child(1) {
+    -ms-flex: 0.4;
+        flex: 0.4; }
+  .top .hover-downlist .input-group input {
+    border-left: none; }
+  .top .hover-downlist .input-group select {
+    border-radius: 8px 0px 0px 8px;
+    border-right: 0; }
+  .top .hover-downlist .input-group button {
     background-color: #019e42;
-    border-radius: 8px 8px 0px 0px; }
-    .top .navbar .navbar-collapse .navbar-nav {
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap; }
-      .top .navbar .navbar-collapse .navbar-nav .dropdown {
-        position: initial; }
-      .top .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
-        color: #ffffff;
-        padding: 1rem 1.3rem;
-        font-size: 16px;
-        font-weight: bold; }
-        .top .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:after {
-          display: none; }
-      .top .navbar .navbar-collapse .navbar-nav .nav-item:hover {
-        background: rgba(255, 255, 255, 0.6); }
-      .top .navbar .navbar-collapse .navbar-nav .nav-item.active {
-        position: relative;
-        background-color: #017e44; }
-        .top .navbar .navbar-collapse .navbar-nav .nav-item.active:before {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          display: block;
-          content: '';
-          height: 5px;
-          background: #000000;
-          opacity: 0.21; }
-  .top .tab-content {
-    position: absolute;
-    top: 100%;
-    z-index: 999;
-    width: 100%; }
-  .top .hover-downlist {
+    color: #ffffff; }
+  .top .hover-downlist ul {
     margin: 0;
-    width: 100%;
-    padding: 0.8rem 1.5rem;
-    background: #ffffff;
-    border: rgba(0, 0, 0, 0.1) solid 1px;
-    border-radius: 0px 0px 8px 8px;
-    opacity: 1;
-    font-size: 14px;
-    color: #333333; }
-    .top .hover-downlist .notice {
-      color: #999999;
-      padding: 0.375rem 0.75rem; }
-      .top .hover-downlist .notice a {
+    padding: 0; }
+    .top .hover-downlist ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 0.3rem 2rem; }
+      .top .hover-downlist ul li a {
+        font-size: 14px;
         color: #333333; }
-    .top .hover-downlist .input-group .form-control:nth-child(1) {
-      -ms-flex: 0.4;
-          flex: 0.4; }
-    .top .hover-downlist .input-group input {
-      border-left: none; }
-    .top .hover-downlist .input-group select {
-      border-radius: 8px 0px 0px 8px;
-      border-right: 0; }
-    .top .hover-downlist .input-group button {
-      background-color: #019e42;
-      color: #ffffff; }
-    .top .hover-downlist ul {
-      margin: 0;
-      padding: 0; }
-      .top .hover-downlist ul li {
-        list-style: none;
-        display: inline-block;
-        padding: 0.3rem 2rem; }
-        .top .hover-downlist ul li a {
-          font-size: 14px;
-          color: #333333; }
 
 .public-title {
   border-bottom: solid 1px #b2e2c6;

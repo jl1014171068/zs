@@ -52,7 +52,7 @@ body {
 }
 
 .top {
-    position: relative;
+    // position: relative;
     .navbar {
         padding: 0 2rem;
         background-color: $MAIN_COLOR;
@@ -108,10 +108,10 @@ body {
     }
 
     .tab-content {
-        position: absolute;
-        top: 100%;
-        z-index: 999;
-        width: 100%;
+        // position: absolute;
+        // top: 100%;
+        // z-index: 999;
+        // width: 100%;
     }
 
     .hover-downlist {

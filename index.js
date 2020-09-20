@@ -54,7 +54,16 @@ $(function() {
                 },
             });
         },
-        navHover() {
+        navHover(){
+            $('#navTab >  li').mousemove(function(e) {
+                var id = $(this).attr('data-id');
+                $('#navTabContent > div').removeClass('show active');
+                console.log($('#navTabContent > div').eq(0))
+                if(id && $(`#${id}`) && $(`#${id}`).length)$(`#${id}`).addClass('show active');
+                else $('#nav-con1').addClass('show active');
+            })
+        },
+        navHover1() {
             $('#navTab >  li').mousemove(function(e) {
                 var id = $(this).attr('data-id')
                 $('#navTabContent > div').removeClass('show active');
