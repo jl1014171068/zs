@@ -52,6 +52,7 @@ body {
 }
 
 .top {
+    position: relative;
     .navbar {
         padding: 0 2rem;
         background-color: $MAIN_COLOR;
@@ -104,6 +105,13 @@ body {
                 }
             }
         }
+    }
+
+    .tab-content {
+        position: absolute;
+        top: 100%;
+        z-index: 999;
+        width: 100%;
     }
 
     .hover-downlist {
@@ -1055,12 +1063,14 @@ body {
     }
 
     .section2 {
-        .swiper-button-prev{
+        .swiper-button-prev {
             left: 0;
         }
-        .swiper-button-next{
+
+        .swiper-button-next {
             right: 0;
         }
+
         .slider {
             ul {
                 li {
@@ -1071,7 +1081,7 @@ body {
                             .img {
                                 max-width: 100%;
                                 width: auto;
-                                height:auto;
+                                height: auto;
                             }
                         }
                     }

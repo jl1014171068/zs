@@ -15,22 +15,16 @@
 
 <body>
     <div class="banner">
-        <!-- <div class="cell">
-            <img src="image/bg_hd_default.png" />
-        </div> -->
     </div>
     <div class="container" id='ping'>
         <div class="top mb-3 " id='topNav'>
             <nav class="navbar navbar-expand-lg navbar-light">
-                <!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
                 <div class=" navbar-collapse" id="navbarNavAltMarkup">
                     <ul class="navbar-nav" id='navTab'>
-                        <li class="nav-item dropdown active show">
+                        <li class="nav-item dropdown active" data-id='nav-con1'>
                             <a class="nav-link">首页</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown" data-id='nav-con2'>
                             <a class="nav-link">
                                 中心介绍
                             </a>
@@ -38,7 +32,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">动态信息</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" data-id='nav-con4'>
                             <a class="nav-link" href="#">政策法规</a>
                         </li>
                         <li class="nav-item">
@@ -62,7 +56,7 @@
                     </ul>
             </nav>
             <div class="tab-content" id="navTabContent">
-                <div class="tab-pane fade show active">
+                <div class="tab-pane fade" id='nav-con1'>
                     <div class="hover-downlist">
                         <div class="row">
                             <div class="col-sm-12 col-12 col-xl-7 notice">
@@ -82,11 +76,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade">
+                <div class="tab-pane fade" id='nav-con2'>
                     <div class="hover-downlist">
                         <ul>
                             <li> <a class="list-item" href="#">中心机构简介</a></li>
                             <li> <a class="list-item" href="#">制度规范</a></li>
+                            <li> <a class="list-item" href="#">培训基地</a></li>
+                            <li> <a class="list-item" href="#">托养中心</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id='nav-con4'>
+                    <div class="hover-downlist">
+                        <ul>
+                            <li> <a class="list-item" href="#">hhhh</a></li>
+                            <li> <a class="list-item" href="#">hhh</a></li>
                             <li> <a class="list-item" href="#">培训基地</a></li>
                             <li> <a class="list-item" href="#">托养中心</a></li>
                         </ul>

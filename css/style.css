@@ -15,6 +15,9 @@ body {
   z-index: -1;
 }
 
+.top {
+  position: relative;
+}
 .top .navbar {
   padding: 0 2rem;
   background-color: #019e42;
@@ -52,6 +55,12 @@ body {
   height: 5px;
   background: #000000;
   opacity: 0.21;
+}
+.top .tab-content {
+  position: absolute;
+  top: 100%;
+  z-index: 999;
+  width: 100%;
 }
 .top .hover-downlist {
   margin: 0;

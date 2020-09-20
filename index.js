@@ -3,6 +3,10 @@ $(function() {
         init() {
             this.navHover();
             this.handelSilder();
+            this.domPin();
+            this.carouselText();
+        },
+        domPin() {
             var height = window.innerHeight - 70;
             if (document.body.clientWidth > 600) {
                 $(".goTop").pin({ padding: { top: height, bottom: 10 }, containerSelector: "#ping" })
@@ -14,12 +18,10 @@ $(function() {
             } else {
                 $(".goTop").pin({ padding: { bottom: 10 }, containerSelector: "#ping" })
             }
-            this.carouselText();
         },
         carouselText() {
             function pub(val) {
                 var text = $("#" + val + " .carousel-inner .active img")[0].dataset;
-                console.log($("#" + val + " .carousel-inner .active img")[0])
                 $("#" + val + " .text").text(text.text)
             }
             pub('carouselExampleIndicators');
@@ -51,18 +53,42 @@ $(function() {
                     prevEl: '.swiper-button-prev',
                 },
             });
-
-            // var sliderNum = document.body.clientWidth < 600 ? 2 : 4
-            // $("#img").powerSlider({ handle: "left", sliderNum });
         },
         navHover() {
-            // tab划过切换--顶部nav
-            $('#navTab >  li').mousemove(function() {
-                var index = $(this).index();
-                if (!$('#navTabContent > div').eq(index).length) return;
+            $('#navTab >  li').mousemove(function(e) {
+                var id = $(this).attr('data-id')
                 $('#navTabContent > div').removeClass('show active');
-                $('#navTabContent > div').eq(index).addClass('show active');
-            });
+                $(`#${id}`).addClass('show active');
+            })
+            $('#navTab >  li').mouseout(function(e) {
+                var el = $(e)[0].toElement;
+                var flag = $(el).hasClass('hover-downlist')
+                if (!flag) {
+                    $('#navTabContent > div').removeClass('show active');
+                    return
+                }
+
+                function throttle(handler, wait) {
+                    var lastTime = 0;
+                    return function() {
+                        var nowTime = new Date().getTime();
+                        if (nowTime - lastTime > wait) {
+                            handler.apply(this, arguments);
+                            lastTime = nowTime;
+                        }
+                    }
+                }
+
+                function mouse(e) {
+                    var el = $(e)[0].toElement;
+                    var flag = $(el).hasClass('hover-downlist') || $(el).closest('#navTabContent').length;
+                    if (!flag) {
+                        $('#navTabContent > div').removeClass('show active');
+                        $(document).off('mousemove', mouse);
+                    }
+                }
+                $(document).on('mousemove', throttle(mouse, 500));
+            })
         }
     };
     Index.init();
