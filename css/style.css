@@ -130,6 +130,9 @@ body {
   margin: 0 1rem 0 0;
   font-weight: bold;
 }
+.public-title .title-item a:hover {
+  text-decoration: none;
+}
 .public-title .title-item a:before {
   content: "";
   display: block;
