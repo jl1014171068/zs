@@ -27,5 +27,5 @@ gulp.task('sass', () => {
         // .pipe(postcss([autoprefixer()]))
         .pipe(autoprefixer())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./css/css'));
+        .pipe(gulp.dest('./css'));
 });
