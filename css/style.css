@@ -20,6 +20,9 @@ body {
   background-color: #019e42;
   border-radius: 8px 8px 0px 0px;
 }
+.top .navbar .navbar-collapse .navbar-nav {
+  flex-flow: row nowrap;
+}
 .top .navbar .navbar-collapse .navbar-nav .dropdown {
   position: initial;
 }
@@ -36,12 +39,10 @@ body {
   background: rgba(255, 255, 255, 0.6);
 }
 .top .navbar .navbar-collapse .navbar-nav .nav-item.active {
+  position: relative;
   background-color: #017e44;
 }
-.top .navbar .navbar-collapse .navbar-nav .nav-item.active .nav-link {
-  position: relative;
-}
-.top .navbar .navbar-collapse .navbar-nav .nav-item.active .nav-link:before {
+.top .navbar .navbar-collapse .navbar-nav .nav-item.active:before {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -752,6 +753,19 @@ body {
   }
   .section3 .card-item .img {
     align-self: center;
+  }
+
+  .top {
+    width: 100%;
+    padding: 0;
+  }
+  .top .navbar {
+    padding: 0 5px;
+  }
+  .top .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+    padding: 10px 5px;
+    font-size: 14px;
+    font-weight: normal;
   }
 }
 

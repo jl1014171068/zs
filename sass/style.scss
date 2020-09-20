@@ -59,6 +59,8 @@ body {
 
         .navbar-collapse {
             .navbar-nav {
+                flex-flow: row nowrap;
+
                 .dropdown {
                     position: initial;
                 }
@@ -80,21 +82,22 @@ body {
                     }
 
                     &.active {
-                        .nav-link {
-                            position: relative;
+                        // .nav-link {
+                        position: relative;
 
-                            &:before {
-                                position: absolute;
-                                bottom: 0;
-                                left: 0;
-                                width: 100%;
-                                display: block;
-                                content: '';
-                                height: 5px;
-                                background: #000000;
-                                opacity: 0.21;
-                            }
+                        &:before {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            display: block;
+                            content: '';
+                            height: 5px;
+                            background: #000000;
+                            opacity: 0.21;
                         }
+
+                        // }
 
                         background-color: $MAIN_COLOR_ACTIVE;
                     }
@@ -979,6 +982,27 @@ body {
 
             .img {
                 align-self: center;
+            }
+        }
+    }
+
+    .top {
+        width: 100%;
+        padding: 0;
+
+        .navbar {
+            padding: 0 5px;
+
+            .navbar-collapse {
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            padding: 10px 5px;
+                            font-size: $FONT_SIZE_MEDIUM;
+                            font-weight: normal;
+                        }
+                    }
+                }
             }
         }
     }
